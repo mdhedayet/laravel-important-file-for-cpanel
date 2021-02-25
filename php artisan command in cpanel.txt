@@ -1,0 +1,19 @@
+Route::get('/cleareverything', function () {
+    
+    $clearcache = Artisan::call('cache:clear');
+    echo "Cache cleared<br>";
+
+    $clearview = Artisan::call('view:clear');
+    echo "View cleared<br>";
+
+    $clearconfig = Artisan::call('config:cache');
+    echo "Config cleared<br>";
+});
+
+
+Route::get('/storage-link', function () {
+    
+    $storage = Artisan::call('storage:link');
+    echo "storage link done";
+
+});
